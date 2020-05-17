@@ -7,7 +7,8 @@
         %ul.messages__box__info
           %li
             = post.user.nickname
-          %li 2019/10/01 10:13
+          %li
+            = post.created_at.strftime("%Y/%m/%d %H:%M")
 
   .form
     =form_with model:@post do |f|
