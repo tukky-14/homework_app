@@ -8,4 +8,26 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+  %p.notice
+  = notice
+  %p.alert
+  = alert
+
+  .wrapper
+    .header
+      .header__top
+        %h1
+        = link_to 'Homework App', root_path, class: "header__top__title"
+        -if user_signed_in?
+          %ul.header__top__info
+            %li.header__top__info__select
+              = current_user.nickname
+            %li.header__top__info__select
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete
+        - else
+          %ul.header__top__info
+            %li.header__top__info__select
+              = link_to '新規登録', new_user_registration_path
+            %li.header__top__info__select
+              = link_to 'ログイン', new_user_session_path  
     = yield
