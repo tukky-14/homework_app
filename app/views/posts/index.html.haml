@@ -1,22 +1,14 @@
-.wrapper
-  .header
-    .header__top
-      %h1.header__top__title Homework App
-      %ul.header__top__info
-        %li.header__top__info__name higuchi
-        %li.header__top__info__logout ログアウト
+.main
+  .messages
+    .messages__box
+      .messages__box__text ここは仮置きで！
+      %ul.messages__box__info
+        %li higuchi
+        %li 2019/10/01 10:13
 
-  .main
-    .messages
-      .messages__box
-        .messages__box__text ここは仮置きで！
-        %ul.messages__box__info
-          %li higuchi
-          %li 2019/10/01 10:13
-
-    .form
-      %form.form__message
-        %textarea{placeholder: "文字を入力（25文字以内）" , rows: "3", class: "form__message__input"}
-        %input{type: "submit", value: "投稿する", class: "form__message__btn"}
-        
-    .footer Homework App 2020
+  .form
+    %form.form__message
+      %textarea{placeholder: "文字を入力（25文字以内）" , rows: "3", class: "form__message__input"}
+      %input{type: "submit", value: "投稿する", class: "form__message__btn"}
+      
+  .footer Homework App 2020

@@ -8,6 +8,11 @@ $text_color: #473838;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none; 
+  color: #000;
+}
+
 .wrapper {
   width: 100vw;
   background-color: #F0E9E4;
@@ -33,7 +38,7 @@ $text_color: #473838;
     &__info {
       display: flex;
       align-items: center;
-      &__logout {
+      &__select {
         margin-left: 24px;
         cursor: pointer;
       }
