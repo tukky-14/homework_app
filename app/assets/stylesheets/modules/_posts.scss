@@ -59,10 +59,11 @@ a {
   margin-top: 30px;
   padding-top: 10px;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  overflow: scroll;
   &__box {
     width: 80%;
     border: 1px dotted #000;
-    margin: 0px auto;
+    margin: 0px auto 15px;
     padding: 20px 5px;
     @include flex_between;
     align-items: center;

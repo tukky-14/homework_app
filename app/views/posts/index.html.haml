@@ -1,14 +1,18 @@
 .main
   .messages
-    .messages__box
-      .messages__box__text ここは仮置きで！
-      %ul.messages__box__info
-        %li higuchi
-        %li 2019/10/01 10:13
+    - @posts.each do |post|
+      .messages__box
+        .messages__box__text
+          = post.text
+        %ul.messages__box__info
+          %li
+            = post.user.nickname
+          %li 2019/10/01 10:13
 
   .form
-    %form.form__message
-      %textarea{placeholder: "文字を入力（25文字以内）" , rows: "3", class: "form__message__input"}
-      %input{type: "submit", value: "投稿する", class: "form__message__btn"}
+    =form_with model:@post do |f|
+      .form__message
+        = f.text_area :text, placeholder: "文字を入力（25文字以内）" , rows: "3", class: "form__message__input"
+        = f.submit "投稿する", class: "form__message__btn"
       
   .footer Homework App 2020
