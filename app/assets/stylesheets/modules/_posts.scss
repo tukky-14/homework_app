@@ -1,0 +1,104 @@
+$text_color: #473838;
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  background-color: #F0E9E4;
+}
+
+
+// ヘッダー
+// ------------------------------------
+.header {
+  background-color: #96D1E3;
+  height: 65px;
+  width: 100vw;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  &__top {
+    width: 65%;
+    margin: 0 auto;
+    @include flex_between;
+    color: $text_color;
+    &__title {
+      font-size: 32px;
+      line-height: 65px;
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      &__logout {
+        margin-left: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// メインメッセージ
+// ------------------------------------
+.main {
+  width: 65%;
+  height: calc(100% - 165px);
+  margin: 0 auto;
+}
+.messages {
+  height: 400px;
+  background-color: #fff;
+  margin-top: 30px;
+  padding-top: 10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  &__box {
+    width: 80%;
+    border: 1px dotted #000;
+    margin: 0px auto;
+    padding: 20px 5px;
+    @include flex_between;
+    align-items: center;
+    color: $text_color;
+    position: relative;
+    &__info {
+      font-size: 8px;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
+  }
+}
+
+// フォーム
+// ------------------------------------
+.form {
+  height: 132px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+  &__message {
+    width: 80%;
+    margin: 0 auto;
+    &__input {
+      width: 100%;
+    }
+    &__btn {
+      display: block;
+      margin: 5px auto;
+      padding: 1px 5px;
+      background-color: #F4F4F4;
+      cursor: pointer;
+    }
+  }
+}
+
+// フッター
+// ------------------------------------
+.footer {
+  text-align: center;
+  margin-top: 30px;
+}
