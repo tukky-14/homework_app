@@ -21,3 +21,11 @@
         ※メッセージの投稿にはログインが必要です※
       
   .footer Homework App 2020
+
+  -# .modal-wrapper
+  -#   .modal
+  -#     本当に送信しますか？
+  -#     .modal__form
+  -#       =form_with model:@post, id: "modal-post" do |f|
+  -#         .form__message
+  -#           = f.submit "投稿する", class: "form__message__btn"

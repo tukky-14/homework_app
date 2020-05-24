@@ -32,7 +32,8 @@ $(function(){
     .done (function(data) {
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('form')[0].reset(); $(".messages").animate({
+      $('form')[0].reset(); 
+      $(".messages").animate({
         scrollTop: $(".messages")[0].scrollHeight,
       });
     })
@@ -40,4 +41,25 @@ $(function(){
       alert('error');
     })
   })
+
+  // ホバー機能
+  // ------------------------------------
+  $('.messages__box').mouseover(function() {
+    $(this).addClass("hover");
+  }).mouseout(function() {
+    $(this).removeClass("hover");
+  })
+
+  // メッセージ送信モーダル
+  // ------------------------------------
+  // $('#new-post').click(function() {
+  //   $('.modal-wrapper').fadeIn();
+  // })
+  // $('#modal-post').click(function() {
+  //   $('.modal-wrapper').fadeOut();
+  // })
+
+
 });
+
+
