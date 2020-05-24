@@ -11,9 +11,13 @@
             = post.created_at.strftime("%Y/%m/%d %H:%M")
 
   .form
-    =form_with model:@post do |f|
-      .form__message
-        = f.text_area :text, placeholder: "文字を入力（25文字以内）" , rows: "3", class: "form__message__input"
-        = f.submit "投稿する", class: "form__message__btn"
+    -if current_user
+      =form_with model:@post, id: "new-post" do |f|
+        .form__message
+          = f.text_area :text, placeholder: "文字を入力（25文字以内）" , rows: "3", class: "form__message__input"
+          = f.submit "投稿する", class: "form__message__btn"
+    - else
+      .form__logout
+        ※メッセージの投稿にはログインが必要です※
       
   .footer Homework App 2020

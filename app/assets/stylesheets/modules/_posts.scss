@@ -100,7 +100,12 @@ a {
       cursor: pointer;
     }
   }
+  &__logout {
+    text-align: center;
+    color: red;
+  }
 }
+
 
 // フッター
 // ------------------------------------
